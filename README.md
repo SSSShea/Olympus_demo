@@ -7,21 +7,25 @@ The system configurations are: the RFs is 64B/PE; the input/output global buffer
 
 ## Getting Started Guide ##
 1. First, you need to prepare a SD card with a capacity of at least 2GB.
-2. Run mksdboot.sh, which requires the sudo permission. In this script, we split the SD card into the *boot* and *rootfs* partitions and format them, and the corresponding images are loaded into these two partitions.
+2. Install the rootfs image from https://www.dropbox.com/s/qa9wgd2jd8j78a6/olympus_rootfs.tar.gz?dl=0
+```
+./installrootfs.sh
+```
+3. Run mksdboot.sh, which requires the sudo permission. In this script, we split the SD card into the *boot* and *rootfs* partitions and format them, and the corresponding images are loaded into these two partitions.
 ```
 sudo ./mksdboot.sh
 ```
-3. Now, you can boot your Xilinx Zynq-7100 using the SD card. The user name and password are:
+4. Now, you can boot your Xilinx Zynq-7100 using the SD card. The user name and password are:
 ```
 stretch-armhf login: osrc
 Password: root
 ```
-4. Switch to root user.
+5. Switch to root user.
 ```
 sudo -s
 Password: root
 ```
-5. Run the models on the DNN processor by the instructions.
+6. Run the models on the DNN processor by the instructions.
 ```
 cd /home/osrc/demo
 ./main olympus/squeezenet/kyp.ini
