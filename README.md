@@ -6,7 +6,7 @@ This is the demo DNN processor system implemented on Xilinx Zynq-7100 to demonst
 The system configurations are: the RFs is 64B/PE; the input/output global buffer size is 256KB; the weight buffer size is 256KB; the PE-array is 7x32; the dataflow is Wo|Co (map the output width and output channel to the row and column of PE-array respectively); and the arithmetic unit is 8-bit fixed-point. The system is able to operate at 90 MHz.
 
 ## Getting Started Guide ##
-1. First, you need to prepare a SD card with a capacity of at least 2GB.
+1. First, you need to prepare a SD card with a capacity of at least 4GB.
 2. Install the rootfs image from https://www.dropbox.com/s/qa9wgd2jd8j78a6/olympus_rootfs.tar.gz?dl=0
 ```
 ./installrootfs.sh
